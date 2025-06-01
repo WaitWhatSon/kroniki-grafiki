@@ -2,16 +2,20 @@ html {
     min-height: 100%;
     /* make sure it is at least as tall as the viewport */
     position: relative;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 }
 
 body {
-    
+
     background-color: #000000;
     height: 100%;
 
     display: flex;
     justify-content: center;
-    
+
     margin: 0;
     padding: 0;
 }
@@ -94,14 +98,14 @@ li {
     li {
         height: 120vw;
     }
-    
+
 }
 
 @media (orientation:landscape) {
     li {
         height: 100vh;
     }
-    
+
 }
 
 
@@ -160,30 +164,30 @@ li {
         width: 100vw;
         /* height: 100vh; */
     }
-    
+
 }
 
 @media (orientation:landscape) {
     .parent {
         height: 100vh;
     }
-    
+
 }
 
-    
+
 
 
 img {
-    max-width:100%;
+    max-width: 100%;
+    user-select: none;
 }
-
 
 
 #preview {
     position: absolute;
 }
 
-        
+
 
 
 

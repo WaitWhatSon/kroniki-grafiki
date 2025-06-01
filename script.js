@@ -1,6 +1,16 @@
 window.addEventListener("load", myScript);
 
+
+
+let timer;
+const touchduration = 500; //length of time we want the user to touch before we do something
+
+window.addEventListener("contextmenu", e => e.preventDefault());
+
 function myScript() {
+
+
+
 
 
 
@@ -15,15 +25,23 @@ function myScript() {
 
     images.forEach(element => {
 
-        element.addEventListener("mousedown", () => {showBigImage(element)})
+        element.addEventListener("mousedown", () => { showBigImage(element) })
 
     });
 
     images.forEach(element => {
 
-        element.addEventListener("touchstart", () => {showBigImage(element)})
+        element.addEventListener("touchstart", () => {
+            timer = setTimeout(function () { onlongtouch(element) }, touchduration);
+        })
 
     });
+
+
+    function onlongtouch(element) {
+        showBigImage(element)
+    }
+
 
     function showBigImage(element) {
 
@@ -31,6 +49,7 @@ function myScript() {
         // console.log(link);
 
         big_img.src = link;
+        
         preview.style.visibility = "visible"
 
     }
@@ -38,10 +57,22 @@ function myScript() {
 
 
 
+
     window.addEventListener("mouseup", () => {
         preview.style.visibility = "hidden"
+        big_img.src = "";
     })
 
+
+
+
+    window.addEventListener("touchend", () => {
+
+        //stops short touches from firing the event
+        if (timer)
+            clearTimeout(timer); // clearTimeout, not cleartimeout..
+
+    })
 
 
 }
