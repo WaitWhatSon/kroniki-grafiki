@@ -1,21 +1,24 @@
+/* ------------------------ */
+/* FONTS SECTION */
+
 @font-face {
-  font-family: Exile;
-  src: url(./fonts/Exile/Exile-Regular.ttf);
+    font-family: Exile;
+    src: url(./fonts/Exile/Exile-Regular.ttf);
 }
 
 @font-face {
-  font-family: Lacquer;
-  src: url(./fonts/Lacquer/Lacquer-Regular.ttf);
+    font-family: Lacquer;
+    src: url(./fonts/Lacquer/Lacquer-Regular.ttf);
 }
 
 @font-face {
-  font-family: Monoton;
-  src: url(./fonts/Monoton/Monoton-Regular.ttf);
+    font-family: Monoton;
+    src: url(./fonts/Monoton/Monoton-Regular.ttf);
 }
 
 @font-face {
-  font-family: Rubic_Dirt;
-  src: url(./fonts/Rubik_Dirt/RubikDirt-Regular.ttf);
+    font-family: Rubic_Dirt;
+    src: url(./fonts/Rubik_Dirt/RubikDirt-Regular.ttf);
 }
 
 h1 {
@@ -34,6 +37,7 @@ h6 {
 
     /* margin-top: 20px; */
 }
+
 /* 
 #socials {
     margin-bottom: 20px;
@@ -45,7 +49,8 @@ h6 {
     padding: 20px;
 }
 
-#project_info h1, h4 {
+#project_info h1,
+h4 {
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -55,6 +60,40 @@ h6 {
     margin-bottom: 20px;
 }
 
+span {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+a:link {
+    color: rgb(116, 209, 223);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(113, 113, 182);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(170, 90, 227);
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: rgb(165, 229, 253);
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+/* ------------------------ */
+/* ------------------------ */
+
+/* ------------------------ */
+/* BASIC HTML SECTION */
 
 html {
     min-height: 100%;
@@ -78,15 +117,23 @@ body {
     padding: 0;
 
 
-    
+
     color: aliceblue;
     text-align: center;
 
     font-size: xx-large;
 }
 
+img {
+    max-width: 100%;
+    user-select: none;
+}
 
+/* ------------------------ */
+/* ------------------------ */
 
+/* ------------------------ */
+/* ZOMBIE MODE CLASSES */
 
 @media (orientation:portrait) {
     .fill {
@@ -101,8 +148,6 @@ body {
         width: 100vh;
     }
 }
-
-
 
 .fill {
 
@@ -125,7 +170,6 @@ body {
     /* Firefox */
 }
 
-
 ul {
     list-style-type: none;
     justify-content: center;
@@ -140,23 +184,6 @@ li {
     justify-content: center;
     align-items: center;
 }
-
-/* 
-
-@media (orientation:portrait) {
-    img {
-        height: 90vw;
-    }
-    
-}
-
-@media (orientation:landscape) {
-    img {
-        height: 90vh;
-    }
-    
-}
- */
 
 
 @media (orientation:portrait) {
@@ -174,11 +201,11 @@ li {
 }
 
 
+/* ------------------------ */
+/* ------------------------ */
 
-
-
-
-
+/* ------------------------ */
+/* MAIN PROJECT CLASSES SECTION */
 
 .fill_grid {
 
@@ -187,7 +214,9 @@ li {
 
     margin: 0;
 
-    
+    display: flex;
+    flex-direction: column;
+
     /* padding-bottom: 10px; */
     /* padding-bottom: 50px; */
 }
@@ -226,6 +255,7 @@ li {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 10px;
+
 }
 
 @media (orientation:portrait) {
@@ -245,21 +275,16 @@ li {
 
 
 
+/* ------------------------ */
+/* ------------------------ */
 
-img {
-    max-width: 100%;
-    user-select: none;
-}
+/* ------------------------ */
+/* BIG IMAGE SECTION */
 
 
 #preview {
     position: absolute;
 }
-
-
-
-
-
 
 
 @media (orientation:portrait) {
@@ -305,37 +330,4 @@ img {
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
-}
-
-
-
-
-span {
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
-
-
-a:link {
-  color: rgb(116, 209, 223);
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: rgb(113, 113, 182);
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:hover {
-  color: rgb(170, 90, 227);
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-a:active {
-  color: rgb(165, 229, 253);
-  background-color: transparent;
-  text-decoration: underline;
 }
