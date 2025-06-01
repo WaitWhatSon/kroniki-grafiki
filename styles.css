@@ -18,6 +18,13 @@ body {
 
     margin: 0;
     padding: 0;
+
+
+    
+    color: aliceblue;
+    text-align: center;
+
+    font-size: xx-large;
 }
 
 
@@ -241,11 +248,3 @@ img {
 
 
 
-
-
-h1 {
-    color: aliceblue;
-    text-align: center;
-
-    font-size: xx-large;
-}
